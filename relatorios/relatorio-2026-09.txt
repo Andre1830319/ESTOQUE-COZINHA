@@ -1,0 +1,280 @@
+RELATÓRIO MENSAL DE ESTOQUE
+Referente a: 2026-09
+Gerado em: 08/09/2026, 20:20:51
+
+- ABACAXI
+    Adicionado: 150 kg
+    Retirado: 0 kg
+
+- ACAFRÃO
+    Adicionado: 502 un
+    Retirado: 0 un
+
+- ACEN BOVINO
+    Adicionado: 889 kg
+    Retirado: 0 kg
+
+- AÇUCAR
+    Adicionado: 2600 kg
+    Retirado: 0 kg
+
+- ALFACE
+    Adicionado: 1000 kg
+    Retirado: 0 kg
+
+- ALHO
+    Adicionado: 250 kg
+    Retirado: 0 kg
+
+- AMIDO DE MILHO
+    Adicionado: 250 un
+    Retirado: 0 un
+
+- ARROZ BRANCO
+    Adicionado: 2500 un
+    Retirado: 0 un
+
+- ARROZ PARBOILIZADO
+    Adicionado: 2400 kg
+    Retirado: 0 kg
+
+- AVEIA FLOCOS FINOS
+    Adicionado: 350 un
+    Retirado: 0 un
+
+- BANANA
+    Adicionado: 150 kg
+    Retirado: 0 kg
+
+- BATATA DOCE
+    Adicionado: 80 kg
+    Retirado: 0 kg
+
+- BATATA INGLESA
+    Adicionado: 100 kg
+    Retirado: 0 kg
+
+- BETERABA
+    Adicionado: 550 kg
+    Retirado: 0 kg
+
+- BOLO
+    Adicionado: 217 kg
+    Retirado: 0 kg
+
+- CARDE DE CHARQUE
+    Adicionado: 889 kg
+    Retirado: 0 kg
+
+- CARNE CAPRINA
+    Adicionado: 250 kg
+    Retirado: 0 kg
+
+- CARNE MOIDA
+    Adicionado: 1838 kg
+    Retirado: 0 kg
+
+- CEBOLA BRANCA
+    Adicionado: 60 kg
+    Retirado: 0 kg
+
+- CENOURA
+    Adicionado: 60 kg
+    Retirado: 0 kg
+
+- CHUCHU
+    Adicionado: 500 kg
+    Retirado: 0 kg
+
+- COENTRO
+    Adicionado: 900 kg
+    Retirado: 0 kg
+
+- COLORAU
+    Adicionado: 800 un
+    Retirado: 0 un
+
+- COMINHO
+    Adicionado: 800 un
+    Retirado: 0 un
+
+- COUVE  FOLHA
+    Adicionado: 800 kg
+    Retirado: 0 kg
+
+- CREME DE LEITE
+    Adicionado: 1400 un
+    Retirado: 0 un
+
+- FAIJÃO MACASSAR
+    Adicionado: 1488 kg
+    Retirado: 0 kg
+
+- FARINHA DE MANDIOCA
+    Adicionado: 957 kg
+    Retirado: 0 kg
+
+- FEIJÃO CARIOCA
+    Adicionado: 2000 un
+    Retirado: 0 un
+
+- FEIJÃO PRETO
+    Adicionado: 1960 kg
+    Retirado: 0 kg
+
+- FLOCÃO
+    Adicionado: 1450 pct
+    Retirado: 0 pct
+
+- FOLHA DE LOURO
+    Adicionado: 200 un
+    Retirado: 0 un
+
+- FRANGO CAIPIRA INTEIRO
+    Adicionado: 270 kg
+    Retirado: 0 kg
+
+- FRANGO DE GRANJA INTEIRO
+    Adicionado: 641 kg
+    Retirado: 0 kg
+
+- IORGUTE BOVINO
+    Adicionado: 400 L
+    Retirado: 0 L
+
+- IORGUTE CAPRINO
+    Adicionado: 200 L
+    Retirado: 0 L
+
+- LARANJA PERA
+    Adicionado: 80 kg
+    Retirado: 0 kg
+
+- LEITE DE COCO
+    Adicionado: 230 un
+    Retirado: 0 un
+
+- LEITE EM PÓ
+    Adicionado: 1297 un
+    Retirado: 0 un
+
+- LEITE PASTEURIZADO
+    Adicionado: 102 L
+    Retirado: 0 L
+
+- LIMÃO
+    Adicionado: 60 kg
+    Retirado: 0 kg
+
+- MAÇA
+    Adicionado: 300 kg
+    Retirado: 0 kg
+
+- MACAXEIRA
+    Adicionado: 80 kg
+    Retirado: 0 kg
+
+- MAMÃO
+    Adicionado: 60 kg
+    Retirado: 0 kg
+
+- MANGA
+    Adicionado: 60 kg
+    Retirado: 0 kg
+
+- MANTEIGA DA TERRA
+    Adicionado: 43 kg
+    Retirado: 0 kg
+
+- MEL
+    Adicionado: 50 kg
+    Retirado: 0 kg
+
+- MELANCIA
+    Adicionado: 150 kg
+    Retirado: 0 kg
+
+- MILHO
+    Adicionado: 200 kg
+    Retirado: 0 kg
+
+- OLEO DE SOJA
+    Adicionado: 600 un
+    Retirado: 0 un
+
+- OREGANO
+    Adicionado: 180 un
+    Retirado: 0 un
+
+- OVOS DE GRANJA/BANDEJA
+    Adicionado: 153 pct
+    Retirado: 0 pct
+
+- PÃO FRANCES
+    Adicionado: 3500 g
+    Retirado: 0 g
+
+- PÃO HOT DOG
+    Adicionado: 3500 g
+    Retirado: 0 g
+
+- PASSAS S/SEMENTE
+    Adicionado: 200 kg
+    Retirado: 0 kg
+
+- PEITO DE FRANGO
+    Adicionado: 600 kg
+    Retirado: 0 kg
+
+- PIMENTA DO REINO
+    Adicionado: 120 un
+    Retirado: 0 un
+
+- PIMENTÃO
+    Adicionado: 500 kg
+    Retirado: 0 kg
+
+- POLPA DE ABACAXI
+    Adicionado: 100 kg
+    Retirado: 0 kg
+
+- POLPA DE ACEROLA
+    Adicionado: 150 kg
+    Retirado: 0 kg
+
+- POLPA DE CAJÁ
+    Adicionado: 150 kg
+    Retirado: 0 kg
+
+- POLPA DE CAJÚ
+    Adicionado: 150 kg
+    Retirado: 0 kg
+
+- POLPA DE GOIABA
+    Adicionado: 150 kg
+    Retirado: 0 kg
+
+- QUEIJO COALHO
+    Adicionado: 200 kg
+    Retirado: 0 kg
+
+- SAL
+    Adicionado: 200 kg
+    Retirado: 0 kg
+
+- TOMATE
+    Adicionado: 150 kg
+    Retirado: 0 kg
+
+- VINAGRE
+    Adicionado: 240 un
+    Retirado: 0 un
+
+----------------------------------------
+SOMA TOTAL DO ESTOQUE POR UNIDADE DE MEDIDA
+
+- g: 0
+- kg: 0
+- L: 0
+- pct: 0
+- un: 0
