@@ -49,7 +49,7 @@ const pool = mysql.createPool(
             queueLimit: 0,
             connectTimeout: 10000,
             ssl: process.env.DATABASE_SSL === "true"
-                ? { rejectUnauthorized: true }
+                ? { rejectUnauthorized: false }
                 : undefined
         }
         : {
