@@ -4,6 +4,12 @@ if (!process.env.VERCEL) {
     require("dotenv").config();
 }
 
+const dns = require("dns");
+// Alguns provedores de banco (como o Aiven) respondem mais rápido em IPv4.
+// Em ambientes serverless como a Vercel, a resolução IPv6 às vezes trava até
+// dar timeout; forçar IPv4 primeiro evita esse travamento.
+dns.setDefaultResultOrder("ipv4first");
+
 const express = require("express");
 const cookieSession = require("cookie-session");
 const mysql = require("mysql2/promise");
@@ -20,13 +26,28 @@ const PORT = process.env.PORT || 3000;
 // Em ambiente serverless (Vercel), cada instância da função pode criar seu
 // próprio pool. Por isso mantemos o connectionLimit baixo, para não estourar
 // o limite de conexões do banco quando várias instâncias sobem ao mesmo tempo.
+// Faz a leitura manual da DATABASE_URL (em vez de confiar que o driver
+// entende um campo "uri" dentro do objeto de configuração), pra garantir
+// que host/usuário/senha/banco sejam sempre interpretados corretamente.
+function lerDatabaseUrl(url) {
+    const parsed = new URL(url);
+    return {
+        host: parsed.hostname,
+        port: parsed.port ? Number(parsed.port) : 3306,
+        user: decodeURIComponent(parsed.username),
+        password: decodeURIComponent(parsed.password),
+        database: parsed.pathname.replace(/^\//, "")
+    };
+}
+
 const pool = mysql.createPool(
     process.env.DATABASE_URL
         ? {
-            uri: process.env.DATABASE_URL,
+            ...lerDatabaseUrl(process.env.DATABASE_URL),
             waitForConnections: true,
             connectionLimit: process.env.VERCEL ? 1 : 5,
             queueLimit: 0,
+            connectTimeout: 10000,
             ssl: process.env.DATABASE_SSL === "true"
                 ? { rejectUnauthorized: true }
                 : undefined
