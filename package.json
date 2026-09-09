@@ -8,8 +8,9 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cookie-session": "^2.1.1",
+    "dotenv": "^16.4.7",
     "express": "^5.1.0",
-    "express-session": "^1.18.2",
     "mysql2": "^3.14.3"
   }
 }
