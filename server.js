@@ -1,4 +1,8 @@
-require("dotenv").config();
+// Na Vercel as variáveis de ambiente já vêm prontas; o dotenv só é
+// necessário para ler o arquivo .env quando rodamos localmente.
+if (!process.env.VERCEL) {
+    require("dotenv").config();
+}
 
 const express = require("express");
 const cookieSession = require("cookie-session");
