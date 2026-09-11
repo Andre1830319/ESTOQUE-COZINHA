@@ -34,7 +34,7 @@ function irParaComTransicao(url) {
 
     setTimeout(function () {
         window.location.href = url;
-    }, 1000);
+    }, 3000);
 }
 
 document.addEventListener("click", function (evento) {
