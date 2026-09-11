@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque da Cozinha</title>
+    <script>
+        // Aplica o tema salvo antes da página desenhar, pra não piscar claro->escuro.
+        (function () {
+            if (localStorage.getItem("tema") === "escuro") {
+                document.documentElement.setAttribute("data-tema", "escuro");
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+<button id="temaToggle" class="temaToggle" type="button" aria-label="Alternar modo escuro">🌙</button>
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <section id="loginTela" class="card login">
+        <h1>🍳 Estoque da Cozinha</h1>
+        <p>Entre para acessar o estoque.</p>
+
+        <form id="loginForm">
+            <label>Usuário</label>
+            <input type="text" id="usuario" required>
+
+            <label>Senha</label>
+            <input type="password" id="senha" required>
+
+            <button type="submit" class="btn azul">Entrar</button>
+        </form>
+
+        <p id="loginErro" class="erro"></p>
+
+        <p class="linkTexto">
+            <a href="#" id="linkEsqueciSenha">Esqueceu sua senha?</a>
+        </p>
+    </section>
+
+
+    <!-- RECUPERAR SENHA -->
+    <section id="recuperarTela" class="card login hidden">
+        <h1>Recuperar senha</h1>
+        <p>Informe seu usuário para ver a sua pergunta de segurança.</p>
+
+        <form id="buscarPerguntaForm">
+            <label>Usuário</label>
+            <input type="text" id="usuarioRecuperar" required>
+
+            <button type="submit" class="btn azul">Buscar pergunta</button>
+        </form>
+
+        <p id="buscarPerguntaErro" class="erro"></p>
+
+        <form id="redefinirSenhaForm" class="hidden">
+            <p><strong id="perguntaTexto"></strong></p>
+
+            <label>Resposta</label>
+            <input type="text" id="respostaSeguranca" required>
+
+            <label>Nova senha</label>
+            <input type="password" id="novaSenhaRecuperar" minlength="6" required>
+
+            <label>Confirmar nova senha</label>
+            <input type="password" id="confirmarNovaSenhaRecuperar" minlength="6" required>
+
+            <button type="submit" class="btn azul">Redefinir senha</button>
+        </form>
+
+        <p id="redefinirSenhaErro" class="erro"></p>
+        <p id="redefinirSenhaSucesso" class="sucesso"></p>
+
+        <p class="linkTexto">
+            <a href="#" id="linkVoltarLogin">Voltar para o login</a>
+        </p>
+    </section>
+
+
+    <!-- ESTOQUE -->
+    <section id="estoqueTela" class="hidden">
+
+        <header>
+            <div>
+                <h1>🍳 Estoque da Cozinha</h1>
+            </div>
+
+            <div class="botoesHeader">
+                <a href="estoque.html" class="btn cinza">Ver estoque</a>
+                <button id="abrirSenha" class="btn cinza">Trocar senha</button>
+                <button id="logout" class="btn vermelho">Sair</button>
+            </div>
+        </header>
+
+
+        <!-- TROCAR SENHA / PERGUNTA DE SEGURANÇA -->
+        <section id="senhaTela" class="card hidden">
+            <h2>Trocar usuário</h2>
+            <p>Usuário atual: <strong id="usuarioAtualTexto">—</strong></p>
+
+            <form id="usuarioForm" class="formulario">
+                <div>
+                    <label>Senha atual</label>
+                    <input type="password" id="senhaAtualUsuario" required>
+                </div>
+
+                <div>
+                    <label>Novo usuário</label>
+                    <input type="text" id="novoUsuario" minlength="3" required>
+                </div>
+
+                <button type="submit" class="btn azul">Salvar novo usuário</button>
+            </form>
+
+            <p id="usuarioErro" class="erro"></p>
+            <p id="usuarioSucesso" class="sucesso"></p>
+
+            <hr>
+
+            <h2>Trocar senha</h2>
+            <p>Por segurança, informe sua senha atual antes de definir uma nova.</p>
+
+            <form id="senhaForm" class="formulario">
+                <div>
+                    <label>Senha atual</label>
+                    <input type="password" id="senhaAtual" required>
+                </div>
+
+                <div>
+                    <label>Nova senha</label>
+                    <input type="password" id="novaSenha" minlength="6" required>
+                </div>
+
+                <div>
+                    <label>Confirmar nova senha</label>
+                    <input type="password" id="confirmarSenha" minlength="6" required>
+                </div>
+
+                <button type="submit" class="btn azul">Salvar nova senha</button>
+            </form>
+
+            <p id="senhaErro" class="erro"></p>
+            <p id="senhaSucesso" class="sucesso"></p>
+
+            <hr>
+
+            <h2>Pergunta de segurança</h2>
+            <p>Usada para recuperar o acesso caso você esqueça a senha.</p>
+
+            <form id="perguntaForm" class="formulario">
+                <div>
+                    <label>Senha atual</label>
+                    <input type="password" id="senhaAtualPergunta" required>
+                </div>
+
+                <div>
+                    <label>Pergunta</label>
+                    <input type="text" id="pergunta" placeholder="Ex.: Qual local você trabalha da cantina??" required>
+                </div>
+
+                <div>
+                    <label>Resposta</label>
+                    <input type="text" id="resposta" required>
+                </div>
+
+                <button type="submit" class="btn azul">Salvar pergunta</button>
+            </form>
+
+            <p id="perguntaErro" class="erro"></p>
+            <p id="perguntaSucesso" class="sucesso"></p>
+        </section>
+
+
+        <!-- ADICIONAR -->
+        <section class="card">
+            <h2>Adicionar item</h2>
+
+            <form id="itemForm" class="formulario">
+                <div>
+                    <label>Item</label>
+                    <input type="text" id="nome" placeholder="Ex.: Arroz" required>
+                </div>
+
+                <div>
+                    <label>Quantidade</label>
+                    <input type="number" id="quantidade" min="0" step="0.01" required>
+                </div>
+
+                <div>
+                    <label>Unidade</label>
+                    <select id="unidade">
+                        <option value="un">Unidade</option>
+                        <option value="kg">Kg</option>
+                        <option value="g">Gramas</option>
+                        <option value="L">Litro</option>
+                        <option value="ml">Ml</option>
+                        <option value="cx">Caixa</option>
+                        <option value="pct">Pacote</option>
+                        <option value="fardo">Fardo</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn verde">+ Adicionar</button>
+            </form>
+
+            <p id="itemErro" class="erro"></p>
+            <p id="itemSucesso" class="sucesso"></p>
+        </section>
+
+
+        <!-- RELATÓRIOS MENSAIS -->
+        <section class="card">
+            <div class="titulo">
+                <div>
+                    <h2>Relatórios mensais</h2>
+                    <p>O relatório do mês atual é atualizado a cada movimentação. Os meses anteriores ficam guardados aqui.</p>
+                </div>
+            </div>
+
+            <div class="filtrosRelatorios">
+                <input type="text" id="buscaRelatorios" placeholder="Buscar por mês (ex.: 2026-08)">
+
+                <select id="filtroAno">
+                    <option value="">Todos os anos</option>
+                </select>
+            </div>
+
+            <div id="listaRelatorios"></div>
+        </section>
+
+    </section>
+
+</div>
+
+<script src="tema.js?v=1"></script>
+<script src="transicao.js?v=2"></script>
+<script src="app.js?v=5"></script>
+</body>
+</html>
