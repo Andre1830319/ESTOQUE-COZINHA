@@ -76,8 +76,18 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         });
 
         atualizarUsuarioAtualTexto(dados.usuario);
-        mostrarEstoque();
-        carregarRelatorios();
+
+        const overlay = criarOverlayTransicao();
+
+        requestAnimationFrame(function () {
+            overlay.classList.add("visivel");
+        });
+
+        setTimeout(function () {
+            overlay.classList.remove("visivel");
+            mostrarEstoque();
+            carregarRelatorios();
+        }, 1750);
     } catch (e) {
         erro.textContent = e.message;
     }
