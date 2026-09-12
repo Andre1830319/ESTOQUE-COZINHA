@@ -26,8 +26,6 @@ function criarOverlayTransicao() {
 function irParaComTransicao(url) {
     const overlay = criarOverlayTransicao();
 
-    document.body.classList.add("saindo");
-
     requestAnimationFrame(function () {
         overlay.classList.add("visivel");
     });
