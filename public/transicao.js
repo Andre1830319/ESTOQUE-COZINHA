@@ -32,7 +32,7 @@ function irParaComTransicao(url) {
 
     setTimeout(function () {
         window.location.href = url;
-    }, 3000);
+    }, 1750);
 }
 
 document.addEventListener("click", function (evento) {
